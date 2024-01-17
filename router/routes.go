@@ -8,6 +8,8 @@ import (
 )
 
 func initializeRoutes(r *gin.Engine) {
+	handler.InitializeHandler()
+
 	r.GET("", func(ctx *gin.Context) {
 		ctx.JSON(http.StatusOK, gin.H{
 			"msg": "ok",
